@@ -18,7 +18,7 @@ let Bell_krater = makePottery("bell krater", 4, 4)
 
 // Fire each piece of pottery in the kiln
 
-firePottery(Kylix, Pelike, Olpe, Oinochoe, Bell_krater)
+const firedPottery = firePottery(Kylix, Pelike, Olpe, Oinochoe, Bell_krater)
 
 // Determine which ones should be sold, and their price
 
