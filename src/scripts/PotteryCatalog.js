@@ -7,3 +7,6 @@ const toSellOrNotToSell = (potteryObject) => {
     return potteryObject
 }
 
+export const usePottery = () => {
+    return potteryToSell.slice()
+}
