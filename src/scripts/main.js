@@ -2,7 +2,8 @@
 
 import { makePottery } from "./PotteryWheel.js"
 import { firePottery } from "./Kiln.js"
-import { Pottery } from "./PotteryList.js"
+import { PotteryList } from "./PotteryList.js"
+import { toSellOrNotToSell } from "./PotteryCatalog.js"
 
 
 
@@ -20,11 +21,28 @@ let Bell_krater = makePottery("bell krater", 4, 4)
 
 // Fire each piece of pottery in the kiln
 
-const firedPottery = firePottery(mug, Pelike, Olpe, Oinochoe, Bell_krater)
+const firedMug = firePottery(mug, 2200)
+console.log(firedMug)
+
+const firedPelike = firePottery(Pelike, 2100)
+console.log(firedPelike)
+
+const firedOlpe = firePottery(Olpe, 2000)
+console.log(firedOlpe)
+
+const firedOinochoe = firePottery(Oinochoe, 2000)
+console.log(firedOinochoe)
+
+const firedBellKrater = firePottery(Bell_krater, 2300)
+console.log(firedBellKrater)
+
 
 // Determine which ones should be sold, and their price
-
+toSellOrNotToSell(firedMug)
+toSellOrNotToSell(firedPelike)
+toSellOrNotToSell(firedOlpe)
+toSellOrNotToSell(firedOinochoe) 
+toSellOrNotToSell(firedBellKrater)
 
 // Invoke the component function that renders the HTML list
-
-Pottery(firedPottery)
+PotteryList()
